@@ -9,6 +9,7 @@ cmake -g Ninja \
       -DCMAKE_BUILD_TYPE=Release \
       -DFAIL_ON_WARNINGS=ON \
       -DUSE_RTTI=ON \
+      -DWITH_BENCHMARK_TOOLS:BOOL=OFF \
       -DWITH_GFLAGS=ON \
       -DWITH_JEMALLOC=ON \
       -DWITH_LZ4=ON \
