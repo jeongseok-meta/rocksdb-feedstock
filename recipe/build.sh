@@ -21,7 +21,7 @@ cmake -g Ninja \
       -B build
 
 ### Build
-cmake  --build build --
+cmake  --build build -- -j${CPU_COUNT}
 
 ### Install
 cmake --build build -- install
