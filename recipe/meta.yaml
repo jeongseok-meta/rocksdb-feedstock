@@ -29,8 +29,6 @@ requirements:
     - lz4-c
     - snappy
     - zstd
-  run:
-    - {{ pin_compatible("jemalloc", max_pin="x") }}
 
 test:
   commands:
