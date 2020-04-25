@@ -9,6 +9,8 @@ source:
   folder: src
   url: https://github.com/facebook/rocksdb/archive/v{{ version }}.tar.gz
   sha256: 540bbf9369a31e0891fcb4056a36ffa439c59fc179aa0b1f46e3478417f97643
+  patches:
+    - 0001-Include-linux-falloc.h.patch
 
 build:
   number: 0
