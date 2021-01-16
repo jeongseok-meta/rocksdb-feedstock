@@ -1,23 +1,25 @@
+MACOSX_DEPLOYMENT_TARGET:
+- '10.9'
 channel_sources:
 - conda-forge,defaults
 channel_targets:
 - conda-forge main
 cxx_compiler:
-- gxx
+- clangxx
 cxx_compiler_version:
-- '7'
-docker_image:
-- condaforge/linux-anvil-comp7
+- '11'
 gflags:
 - '2.2'
 lz4_c:
 - 1.9.2
+macos_machine:
+- x86_64-apple-darwin13.4.0
 pin_run_as_build:
   lz4-c:
     max_pin: x.x.x
-  zstd:
-    max_pin: x.x.x
 snappy:
 - '1'
+target_platform:
+- osx-64
 zstd:
-- 1.4.4
+- '1.4'
