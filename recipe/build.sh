@@ -1,6 +1,9 @@
 #!/bin/bash
 set -eu
 
+export CPPFLAGS="${CPPFLAGS} -std=c++17"
+export CXXFLAGS="${CXXFLAGS} -std=c++17"
+
 ### Create Makefiles
 cmake ${CMAKE_ARGS} -GNinja \
       -DCMAKE_PREFIX_PATH=$PREFIX \
