@@ -3,6 +3,14 @@ set -eu
 
 export EXTRA_CXXFLAGS="${CXXFLAGS} -std=c++17"
 
+# Enabling jemalloc does not work on OSX with the following error message:
+# "error: unknown attribute 'je_malloc' ignored"
+if [[ "${target_platform}" == osx-* ]]; then
+  export WITH_JEMALLOC="OFF"
+else
+  export WITH_JEMALLOC="ON"
+fi
+
 ### Create Makefiles
 cmake ${CMAKE_ARGS} -GNinja \
       -DCMAKE_PREFIX_PATH=$PREFIX \
@@ -14,7 +22,7 @@ cmake ${CMAKE_ARGS} -GNinja \
       -DUSE_RTTI=ON \
       -DWITH_BENCHMARK_TOOLS:BOOL=OFF \
       -DWITH_GFLAGS=ON \
-      -DWITH_JEMALLOC=OFF \
+      -DWITH_JEMALLOC=${WITH_JEMALLOC} \
       -DWITH_LZ4=ON \
       -DWITH_SNAPPY=ON \
       -DWITH_TESTS=OFF \
