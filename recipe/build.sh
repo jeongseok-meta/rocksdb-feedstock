@@ -17,8 +17,9 @@ cmake ${CMAKE_ARGS} -GNinja \
       -DWITH_SNAPPY=ON \
       -DWITH_TESTS=OFF \
       -DWITH_TOOLS=OFF \
-      -DWITH_ZLIB=OFF \
+      -DWITH_ZLIB=ON \
       -DWITH_ZSTD=ON \
+      -WITH_BZ2=ON \
       -S src \
       -B build
 
