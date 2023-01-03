@@ -14,7 +14,7 @@ cmake ${CMAKE_ARGS} -GNinja \
       -DUSE_RTTI=ON \
       -DWITH_BENCHMARK_TOOLS:BOOL=OFF \
       -DWITH_GFLAGS=ON \
-      -DWITH_JEMALLOC=ON \
+      -DWITH_JEMALLOC=OFF \
       -DWITH_LZ4=ON \
       -DWITH_SNAPPY=ON \
       -DWITH_TESTS=OFF \
