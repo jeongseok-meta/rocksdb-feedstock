@@ -1,6 +1,5 @@
 set "GFLAGS_LIB_RELEASE=%LIBRARY_PREFIX%\lib\gflags.lib"
 set "SNAPPY_LIB_RELEASE=%LIBRARY_PREFIX%\lib\snappy.lib"
-set "LZ4_LIB_RELEASE=%LIBRARY_PREFIX%\lib\lz4.lib"
 set "ZLIB_LIB_RELEASE=%LIBRARY_PREFIX%\lib\zlib.lib"
 set "ZSTD_LIB_RELEASE=%LIBRARY_PREFIX%\lib\libzstd_static.lib"
 
@@ -12,7 +11,7 @@ cmake -GNinja ^
       -DUSE_RTTI=ON ^
       -DWITH_BENCHMARK_TOOLS:BOOL=OFF ^
       -DWITH_GFLAGS=ON ^
-      -DWITH_LZ4=ON ^
+      -DWITH_LZ4=OFF ^
       -DWITH_SNAPPY=ON ^
       -DWITH_TESTS=OFF ^
       -DWITH_TOOLS=OFF ^
