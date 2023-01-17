@@ -11,7 +11,7 @@ source:
   sha256: b85408a374770897332bf15e51620a5f35720dd416a4749e3899057f9cfaf84d
 
 build:
-  number: 0
+  number: 1
   run_exports:
     # Symbols are removed from a minor release to the next.
     # https://abi-laboratory.pro/index.php?view=timeline&l=rocksdb
