@@ -1,7 +1,7 @@
 set "GFLAGS_LIB_RELEASE=%LIBRARY_PREFIX%\lib\gflags.lib"
 set "SNAPPY_LIB_RELEASE=%LIBRARY_PREFIX%\lib\snappy.lib"
 set "ZLIB_LIB_RELEASE=%LIBRARY_PREFIX%\lib\zlib.lib"
-set "LZ4=%LIBRARY_PREFIX%\lib\liblz4.lib"
+set "LZ4_LIB_RELEASE=%LIBRARY_PREFIX%\lib\liblz4.lib"
 set "ZSTD_LIB_RELEASE=%LIBRARY_PREFIX%\lib\zstd.lib"
 
 cmake -GNinja ^
