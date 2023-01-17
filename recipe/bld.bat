@@ -13,6 +13,7 @@ cmake -GNinja ^
       -DWITH_ZLIB=ON ^
       -DWITH_ZSTD=ON ^
       -WITH_BZ2=ON ^
+      -WITH_JEMALLOC=OFF ^
       -S src ^
       -B build
 if errorlevel 1 exit 1
