@@ -24,7 +24,7 @@ requirements:
     - ninja >=1.10,<2
   host:
     - gflags
-    - jemalloc  # [win]
+    - jemalloc  # [not win]
     - lz4-c
     - snappy
     - zstd
