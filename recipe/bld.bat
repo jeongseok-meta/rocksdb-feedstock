@@ -5,12 +5,12 @@ cmake -GNinja ^
       -DPORTABLE=ON ^
       -DUSE_RTTI=ON ^
       -DWITH_BENCHMARK_TOOLS:BOOL=OFF ^
-      -DWITH_GFLAGS=OFF ^
-      -DWITH_LZ4=OFF ^
-      -DWITH_SNAPPY=OFF ^
+      -DWITH_GFLAGS=ON ^
+      -DWITH_LZ4=ON ^
+      -DWITH_SNAPPY=ON ^
       -DWITH_TESTS=OFF ^
       -DWITH_TOOLS=OFF ^
-      -DWITH_ZLIB=OFF ^
+      -DWITH_ZLIB=ON ^
       -DWITH_ZSTD=ON ^
       -WITH_BZ2=ON ^
       -WITH_JEMALLOC=OFF ^
