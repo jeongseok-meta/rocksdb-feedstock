@@ -7,7 +7,7 @@ cmake -GNinja ^
       -DWITH_BENCHMARK_TOOLS:BOOL=OFF ^
       -DWITH_GFLAGS=OFF ^
       -DWITH_LZ4=ON ^
-      -DWITH_SNAPPY=ON ^
+      -DWITH_SNAPPY=OFF ^
       -DWITH_TESTS=OFF ^
       -DWITH_TOOLS=OFF ^
       -DWITH_ZLIB=ON ^
