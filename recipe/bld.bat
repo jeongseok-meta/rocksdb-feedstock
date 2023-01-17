@@ -18,11 +18,9 @@ cmake -GNinja ^
       -B build
 if errorlevel 1 exit 1
 
-### Build
 cmake  --build build
 if errorlevel 1 exit 1
 
-### Install
 cmake --build build -- install
 if errorlevel 1 exit 1
 
