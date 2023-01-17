@@ -12,7 +12,6 @@ source:
 
 build:
   number: 0
-  skip: true  # [win]
   run_exports:
     # Symbols are removed from a minor release to the next.
     # https://abi-laboratory.pro/index.php?view=timeline&l=rocksdb
