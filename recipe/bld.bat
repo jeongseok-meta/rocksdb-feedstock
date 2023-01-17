@@ -10,7 +10,7 @@ cmake -GNinja ^
       -DWITH_SNAPPY=OFF ^
       -DWITH_TESTS=OFF ^
       -DWITH_TOOLS=OFF ^
-      -DWITH_ZLIB=ON ^
+      -DWITH_ZLIB=OFF ^
       -DWITH_ZSTD=ON ^
       -WITH_BZ2=ON ^
       -WITH_JEMALLOC=OFF ^
