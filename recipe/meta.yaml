@@ -33,11 +33,11 @@ requirements:
 
 test:
   commands:
-    - test -f ${PREFIX}/lib/rocksdb.lib         # [win]
-    - test -f ${PREFIX}/lib/rocksdb-shared.dll  # [win]
     - test -f ${PREFIX}/lib/librocksdb.a        # [not win]
+    - test -f ${PREFIX}/lib/rocksdb.lib         # [win]
     - test -f ${PREFIX}/lib/librocksdb.dylib    # [osx]
     - test -f ${PREFIX}/lib/librocksdb.so       # [linux]
+    - test -f ${PREFIX}/lib/rocksdb-shared.lib  # [win]
     - test -f ${PREFIX}/include/rocksdb/db.h
 
 about:
