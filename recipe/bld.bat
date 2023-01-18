@@ -6,8 +6,6 @@ set "ZLIB_LIB_RELEASE=%LIBRARY_PREFIX%\lib\zlib.lib"
 set "LZ4_LIB_RELEASE=%LIBRARY_PREFIX%\lib\liblz4.lib"
 set "ZSTD_LIB_RELEASE=%LIBRARY_PREFIX%\lib\zstd.lib"
 
-set "CMAKE_MESSAGE_LOG_LEVEL=VERBOSE"
-
 echo Running CMake...
 cmake -GNinja ^
       -DROCKSDB_INSTALL_ON_WINDOWS=ON ^
@@ -40,7 +38,3 @@ if errorlevel 1 exit 1
 
 echo Contents of output directory %LIBRARY_PREFIX%:
 dir /S %LIBRARY_PREFIX%
-
-mkdir %LIBRARY_PREFIX%\lib
-copy build\rocksdb-shared.dll %LIBRARY_PREFIX%\lib\rocksdb.dll
-copy build\rocksdb.lib %LIBRARY_PREFIX%\lib\rocksdb.lib
