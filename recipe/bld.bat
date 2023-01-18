@@ -28,23 +28,14 @@ cmake -GNinja ^
       -S src ^
       -B build
 if errorlevel 1 exit 1
-echo Done running CMake.
-
-echo Generated build file:
-type build\build.ninja
 
 echo Running CMake build...
 cmake --build build
 if errorlevel 1 exit 1
-echo Done running CMake build.
-
-echo Contents of build directory:
-dir /S build\
-
-echo Contents of cmake_install.cmake:
-type build\cmake_install.cmake
 
 echo Running CMake install...
 cmake --install build
 if errorlevel 1 exit 1
-echo Done running CMake install.
+
+echo Contents of build directory:
+dir /S build\
