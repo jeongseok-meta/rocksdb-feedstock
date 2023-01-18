@@ -10,6 +10,7 @@ set "CMAKE_MESSAGE_LOG_LEVEL=VERBOSE"
 
 echo Running CMake...
 cmake -GNinja ^
+      -DROCKSDB_INSTALL_ON_WINDOWS=ON ^
       -DCMAKE_BUILD_TYPE=Release ^
       -DFAIL_ON_WARNINGS=ON ^
       -DPORTABLE=ON ^
@@ -37,5 +38,9 @@ echo Running CMake install...
 cmake --install build
 if errorlevel 1 exit 1
 
-echo Contents of build directory:
-dir /S build\
+echo Contents of output directory %LIBRARY_PREFIX%:
+dir /S %LIBRARY_PREFIX%
+
+mkdir %LIBRARY_PREFIX%\lib
+copy build\rocksdb-shared.dll %LIBRARY_PREFIX%\lib\rocksdb.dll
+copy build\rocksdb.lib %LIBRARY_PREFIX%\lib\rocksdb.lib
