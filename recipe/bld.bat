@@ -4,8 +4,10 @@ set "ZLIB_LIB_RELEASE=%LIBRARY_PREFIX%\lib\zlib.lib"
 set "LZ4_LIB_RELEASE=%LIBRARY_PREFIX%\lib\liblz4.lib"
 set "ZSTD_LIB_RELEASE=%LIBRARY_PREFIX%\lib\zstd.lib"
 
+set "CMAKE_MESSAGE_LOG_LEVEL=VERBOSE"
+
+echo "Running CMake..."
 cmake -GNinja ^
-      -DCMAKE_INSTALL_LIBDIR=lib ^
       -DCMAKE_BUILD_TYPE=Release ^
       -DFAIL_ON_WARNINGS=ON ^
       -DPORTABLE=ON ^
@@ -23,10 +25,18 @@ cmake -GNinja ^
       -S src ^
       -B build
 if errorlevel 1 exit 1
+echo "Done running CMake."
 
-cmake  --build build
+echo "Generated build file:"
+type build\build.ninja
+
+echo "Running CMake build..."
+cmake --build build
 if errorlevel 1 exit 1
+echo "Done running CMake build."
 
+echo "Running CMake install..."
 cmake --build build -- install
 if errorlevel 1 exit 1
+echo "Done running CMake install."
 
