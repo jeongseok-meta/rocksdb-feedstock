@@ -44,6 +44,6 @@ echo Contents of cmake_install.cmake:
 type build\cmake_install.cmake
 
 echo Running CMake install...
-cmake --build build -P cmake_install.cmake
+cmake --install build
 if errorlevel 1 exit 1
 echo Done running CMake install.
