@@ -35,7 +35,10 @@ cmake --build build
 if errorlevel 1 exit 1
 echo Done running CMake build.
 
-echo "Running CMake install..."
+echo Contents of build directory:
+dir /S build\
+
+echo Running CMake install...
 cmake --build build -- install
 if errorlevel 1 exit 1
-echo "Done running CMake install."
+echo Done running CMake install.
