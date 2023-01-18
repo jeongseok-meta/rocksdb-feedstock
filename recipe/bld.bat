@@ -1,3 +1,5 @@
+echo on
+
 set "GFLAGS_LIB_RELEASE=%LIBRARY_PREFIX%\lib\gflags.lib"
 set "SNAPPY_LIB_RELEASE=%LIBRARY_PREFIX%\lib\snappy.lib"
 set "ZLIB_LIB_RELEASE=%LIBRARY_PREFIX%\lib\zlib.lib"
@@ -42,6 +44,6 @@ echo Contents of cmake_install.cmake:
 type build\cmake_install.cmake
 
 echo Running CMake install...
-cmake --build build -P build\cmake_install.cmake
+cmake --build build -P cmake_install.cmake
 if errorlevel 1 exit 1
 echo Done running CMake install.
