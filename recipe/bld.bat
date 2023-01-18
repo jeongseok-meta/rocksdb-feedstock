@@ -24,7 +24,7 @@ cmake -GNinja ^
       -DWITH_ZSTD=ON ^
       -WITH_BZ2=ON ^
       -WITH_JEMALLOC=OFF ^
-      -DCMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX%
+      -DCMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX% ^
       -S src ^
       -B build
 if errorlevel 1 exit 1
