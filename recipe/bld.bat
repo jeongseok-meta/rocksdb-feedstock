@@ -36,5 +36,3 @@ echo Running CMake install...
 cmake --install build
 if errorlevel 1 exit 1
 
-echo Contents of output directory %LIBRARY_PREFIX%:
-dir /S %LIBRARY_PREFIX%
