@@ -38,7 +38,7 @@ test:
     - test -f ${PREFIX}/include/rocksdb/db.h                # [unix]
     - if not exist %LIBRARY_PREFIX%\lib\rocksdb-shared.lib exit 1  # [win]
     - if not exist %LIBRARY_PREFIX%\include\rocksdb\db.h exit 1    # [win]
-    - if not exist %LIBRARY_PREFIX%\librocksdb.lib exit 1          # [win]
+    - if not exist %LIBRARY_PREFIX%\rocksdb.lib exit 1             # [win]
 
 about:
   home: https://rocksdb.org
