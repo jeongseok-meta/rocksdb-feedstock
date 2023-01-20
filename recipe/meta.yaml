@@ -33,12 +33,12 @@ requirements:
 
 test:
   commands:
-    - test -f ${PREFIX}/lib/librocksdb.a                   # [unix]
-    - test -f ${PREFIX}/lib/librocksdb${SHLIB_EXT}         # [unix]
-    - test -f ${PREFIX}/include/rocksdb/db.h               # [unix]
-    - if not exist %LIBRARY_PREFIX\lib\rocksdb-shared.lib  # [win]
-    - if not exist %LIBRARY_PREFIX\include\rocksdb\db.h    # [win]
-    - if not exist %LIBRARY_PREFIX%\librocksdb.lib         # [win]
+    - test -f ${PREFIX}/lib/librocksdb.a                    # [unix]
+    - test -f ${PREFIX}/lib/librocksdb${SHLIB_EXT}          # [unix]
+    - test -f ${PREFIX}/include/rocksdb/db.h                # [unix]
+    - if not exist %LIBRARY_PREFIX%\lib\rocksdb-shared.lib  # [win]
+    - if not exist %LIBRARY_PREFIX%\include\rocksdb\db.h    # [win]
+    - if not exist %LIBRARY_PREFIX%\librocksdb.lib          # [win]
 
 about:
   home: https://rocksdb.org
