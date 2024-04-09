@@ -14,7 +14,7 @@ source:
     - patches/920d72e6faf1a2cf941d9f6aaf8f771e4dbdca38.patch
 
 build:
-  number: 0
+  number: 1
   run_exports:
     # Symbols are removed from a minor release to the next.
     # https://abi-laboratory.pro/index.php?view=timeline&l=rocksdb
@@ -23,6 +23,7 @@ build:
 requirements:
   build:
     - {{ compiler("cxx") }}
+    - {{ stdlib("c") }}
     - cmake >=3.5.1,<4
     - ninja >=1.10,<2
   host:
