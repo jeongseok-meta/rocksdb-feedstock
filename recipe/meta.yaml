@@ -9,9 +9,6 @@ source:
   folder: src
   url: https://github.com/facebook/rocksdb/archive/v{{ version }}.tar.gz
   sha256: 3c225e45bf6f6367cf5a4413f71abc4a3427627790e6d58c57adc2daa4b6309d
-  patches:
-    # Backport of https://github.com/facebook/rocksdb/pull/12309
-    - patches/e09b9d0cb94fec262b2a5dc30111fd767c0664e9.patch
 
 build:
   number: 0
