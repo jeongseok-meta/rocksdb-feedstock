@@ -1,12 +1,20 @@
 #!/bin/bash
 set -eu
 
-export CXXFLAGS="${CXXFLAGS} \
+CXXFLAGS="${CXXFLAGS} \
   -std=c++17 \
   -Wno-error=redundant-move \
-  -Wno-error=maybe-uninitialized \
   -include cstdint \
   -include system_error"
+
+if [[ "${target_platform}" == linux-* ]]; then
+  CXXFLAGS="${CXXFLAGS} -Wno-error=maybe-uninitialized"
+else
+  CXXFLAGS="${CXXFLAGS} -Wno-error=uninitialized"
+fi
+
+# Export the final CXXFLAGS
+export CXXFLAGS
 
 # Enabling jemalloc does not work on OSX with the following error message:
 # "error: unknown attribute 'je_malloc' ignored"
