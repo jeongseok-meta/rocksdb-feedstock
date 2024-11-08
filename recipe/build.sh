@@ -1,7 +1,12 @@
 #!/bin/bash
 set -eu
 
-export EXTRA_CXXFLAGS="${CXXFLAGS} -std=c++17"
+export CXXFLAGS="${CXXFLAGS} \
+  -std=c++17 \
+  -Wno-error=redundant-move \
+  -Wno-error=maybe-uninitialized \
+  -include cstdint \
+  -include system_error"
 
 # Enabling jemalloc does not work on OSX with the following error message:
 # "error: unknown attribute 'je_malloc' ignored"
