@@ -10,7 +10,7 @@ CXXFLAGS="${CXXFLAGS} \
 if [[ "${target_platform}" == linux-* ]]; then
   CXXFLAGS="${CXXFLAGS} -Wno-error=maybe-uninitialized"
 else
-  CXXFLAGS="${CXXFLAGS} -Wno-error=uninitialized"
+  CXXFLAGS="${CXXFLAGS} -Wno-error=uninitialized -Wno-error=unused-but-set-variable"
 fi
 
 # Export the final CXXFLAGS
