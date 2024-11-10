@@ -188,6 +188,7 @@ Feedstock Maintainers
 =====================
 
 * [@benhuff](https://github.com/benhuff/)
+* [@jeongseok-meta](https://github.com/jeongseok-meta/)
 * [@oblute](https://github.com/oblute/)
 * [@rluria14](https://github.com/rluria14/)
 * [@sodre](https://github.com/sodre/)
